@@ -768,15 +768,6 @@ static int df_rgx_busfreq_probe(struct platform_device *pdev)
 			.get_max_state = tcd_get_max_state,
 			.get_cur_state = tcd_get_cur_state,
 			.set_cur_state = tcd_set_cur_state,
-#if defined(THERMAL_DEBUG)
-			.get_force_state_override =
-				tcd_get_force_state_override,
-			.set_force_state_override =
-				tcd_set_force_state_override,
-#else
-			.get_force_state_override = NULL,
-			.set_force_state_override = NULL,
-#endif
 			.get_available_states =
 				tcd_get_available_states,
 		};
